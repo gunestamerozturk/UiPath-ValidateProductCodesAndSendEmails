@@ -1,0 +1,6 @@
+{
+  "ProjectType": "Process",
+  "Name": "ValidateProductCodesAndSendEmails",
+  "Description": "Read a Google Workbook file, which contains columns: \"Customer Name\", \"Code Submitted\", and \"Email Address\".\r\nFor each row in the workbook:\r\nValidate the value in \"Code Submitted\" using this rule: The code must start with PRD-, followed by 4 digits, and end with 2 uppercase letters (e.g., PRD-1234AB). If the code matches this format, consider it Valid. Otherwise, it's Invalid.\r\nIf the code is Valid, send an email to the address in \"Email Address\" with the subject \"Registration Successful\" and body: \"Hello [Customer Name], your product registration code '[Code Submitted]' has been successfully verified. Thank you!\"\r\nIf the code is Invalid, send an email with the subject \"Action Needed: Invalid Code\" and body: \"Hello [Customer Name], the code '[Code Submitted]' you provided is invalid. Please double-check the format and try again. Valid format: PRD-1234AB.\"",
+  "MainFile": "Main.xaml"
+}

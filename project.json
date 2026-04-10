@@ -1,0 +1,60 @@
+{
+  "name": "ValidateProductCodesAndSendEmails",
+  "projectId": "56e93704-8c3f-482d-9e14-1f020c53be82",
+  "description": "Read a Google Workbook file, which contains columns: \"Customer Name\", \"Code Submitted\", and \"Email Address\".\r\nFor each row in the workbook:\r\nValidate the value in \"Code Submitted\" using this rule: The code must start with PRD-, followed by 4 digits, and end with 2 uppercase letters (e.g., PRD-1234AB). If the code matches this format, consider it Valid. Otherwise, it's Invalid.\r\nIf the code is Valid, send an email to the address in \"Email Address\" with the subject \"Registration Successful\" and body: \"Hello [Customer Name], your product registration code '[Code Submitted]' has been successfully verified. Thank you!\"\r\nIf the code is Invalid, send an email with the subject \"Action Needed: Invalid Code\" and body: \"Hello [Customer Name], the code '[Code Submitted]' you provided is invalid. Please double-check the format and try again. Valid format: PRD-1234AB.\"",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.GSuite.Activities": "3.7.11",
+    "UiPath.IntegrationService.Activities": "1.24.0",
+    "UiPath.System.Activities": "26.2.4",
+    "UiPath.WebAPI.Activities": "2.4.0"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "b9ecc872-af74-42c5-ba3e-cfdbe299cc61",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}
